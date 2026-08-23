@@ -46,6 +46,11 @@ linkedin:
   icon  : fab fa-linkedin-in
   color : 007bb5
 
+orcid:
+  url   : https://orcid.org/
+  icon  : fab fa-orcid
+  color : a6ce39
+
 medium:
   url   : https://medium.com/@
   icon  : fab fa-medium
