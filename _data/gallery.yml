@@ -1,0 +1,10 @@
+# Add photos here. Each entry needs an image path (under assets/images/gallery/)
+# and an optional short caption. New entries just get appended to the list.
+#
+# - image   : /assets/images/gallery/example.jpg
+#   caption : A short explanation of this photo.
+
+- image : /assets/images/gallery/0006_4.jpg
+- image : /assets/images/gallery/0011_9.jpg
+- image : /assets/images/gallery/0013_11.jpg
+- image : /assets/images/gallery/0026_24.jpg
