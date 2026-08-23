@@ -1,9 +1,10 @@
-{%- assign photos = site.data.gallery -%}
+{%- assign photos = include.photos -%}
+{%- assign carousel_id = include.id | default: "gallery-carousel" -%}
 {%- if photos and photos.size > 0 -%}
 <div class="gallery-carousel-wrap">
   <button class="gallery-nav gallery-nav-prev" aria-label="Previous photo">&#10094;</button>
 
-  <div class="gallery-carousel" id="gallery-carousel">
+  <div class="gallery-carousel" id="{{ carousel_id }}">
     {%- for photo in photos -%}
     <div class="gallery-slide">
       <img src="{{ photo.image | relative_url }}" alt="{{ photo.caption | default: 'Gallery photo' }}">
@@ -17,94 +18,15 @@
   <button class="gallery-nav gallery-nav-next" aria-label="Next photo">&#10095;</button>
 </div>
 
-<style>
-  .gallery-carousel-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-  }
-
-  .gallery-carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 1.5rem;
-    padding: 2rem 15%;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .gallery-carousel::-webkit-scrollbar {
-    display: none;
-  }
-
-  .gallery-slide {
-    flex: 0 0 auto;
-    width: 75%;
-    max-width: 800px;
-    scroll-snap-align: center;
-    text-align: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    transform: scale(0.75);
-    opacity: 0.5;
-  }
-
-  .gallery-slide.is-active {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  .gallery-slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-  }
-
-  .gallery-caption {
-    margin-top: 0.75rem;
-    font-size: 0.9rem;
-    color: #6c757d;
-  }
-
-  .gallery-nav {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #6c757d;
-    cursor: pointer;
-    padding: 0.5rem;
-    z-index: 1;
-  }
-
-  .gallery-nav:hover {
-    color: #007bff;
-  }
-
-  @media (max-width: 768px) {
-    .gallery-carousel {
-      padding: 1rem 10%;
-    }
-
-    .gallery-slide {
-      width: 80%;
-    }
-
-    .gallery-nav {
-      display: none;
-    }
-  }
-</style>
-
 <script>
   (function () {
-    const carousel = document.getElementById('gallery-carousel');
+    const carousel = document.getElementById('{{ carousel_id }}');
     if (!carousel) return;
 
+    const wrap = carousel.closest('.gallery-carousel-wrap');
     const slides = Array.from(carousel.querySelectorAll('.gallery-slide'));
-    const prevBtn = document.querySelector('.gallery-nav-prev');
-    const nextBtn = document.querySelector('.gallery-nav-next');
+    const prevBtn = wrap.querySelector('.gallery-nav-prev');
+    const nextBtn = wrap.querySelector('.gallery-nav-next');
 
     function updateActiveSlide() {
       const carouselCenter = carousel.scrollLeft + carousel.clientWidth / 2;

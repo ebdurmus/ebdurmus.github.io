@@ -1,0 +1,11 @@
+# Photos from the LEB members photography project.
+# Add entries the same way as _data/gallery.yml.
+#
+# - image   : /assets/images/leb-gallery/example.jpg
+#   caption : A short explanation of this photo.
+
+- image : /assets/images/leb-gallery/0004.jpg
+- image : /assets/images/leb-gallery/0009.jpg
+- image : /assets/images/leb-gallery/0011.jpg
+- image : /assets/images/leb-gallery/0028_26.jpg
+- image : /assets/images/leb-gallery/0030_28.jpg
