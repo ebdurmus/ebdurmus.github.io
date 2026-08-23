@@ -11,30 +11,28 @@ main .row.p-4 > div.mt-4 {
   margin-top: 0 !important;
 }
 
+.landing-photo #container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .landing-name {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  text-align: center;
-  margin-top: 0.25rem;
-}
-
-main .row.p-4 p.text-muted {
-  margin-bottom: 0;
-}
-
-main .row.p-4 #container.my-2 {
-  margin-bottom: 0 !important;
+  text-align: left;
+  margin-top: 0;
 }
 
 .landing-tagline {
-  text-align: center;
+  text-align: left;
   margin-top: 0.75rem;
   color: #6c757d;
 }
 
 .landing-cv {
-  text-align: center;
+  text-align: left;
   margin-top: 1rem;
 }
 
