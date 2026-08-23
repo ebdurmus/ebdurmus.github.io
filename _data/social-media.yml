@@ -45,11 +45,13 @@ linkedin:
   url   : https://www.linkedin.com/in/
   icon  : fab fa-linkedin-in
   color : 007bb5
+  label : LinkedIn
 
 orcid:
   url   : https://orcid.org/
   icon  : fab fa-orcid
   color : a6ce39
+  label : ORCID
 
 medium:
   url   : https://medium.com/@
