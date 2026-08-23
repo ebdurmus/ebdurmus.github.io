@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Art & Photography
 permalink: /about/
 weight: 3
 ---
