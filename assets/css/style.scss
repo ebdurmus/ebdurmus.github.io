@@ -3,8 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
 @import "portfolYOU";
 
-.landing {
+main .row.p-4 {
   padding-bottom: 0 !important;
+}
+
+main .row.p-4 > div.mt-4 {
+  margin-top: 0 !important;
 }
 
 .landing-name {
@@ -13,4 +17,13 @@
   font-weight: 600;
   text-align: center;
   margin-top: 0.25rem;
+}
+
+#attribution {
+  position: static !important;
+  writing-mode: horizontal-tb !important;
+  transform: none !important;
+  right: auto !important;
+  display: block;
+  margin-top: 0.5rem;
 }
