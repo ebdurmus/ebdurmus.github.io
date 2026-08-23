@@ -11,45 +11,14 @@ main .row.p-4 > div.mt-4 {
   margin-top: 0 !important;
 }
 
-.landing-photo #container {
+main .row.p-4 .col-lg-3 #container {
   max-width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.landing-name {
+main .row.p-4 h1.display-5 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: left;
-  margin-top: 0;
-}
-
-.landing-tagline {
-  text-align: left;
-  margin-top: 0.75rem;
-  color: #6c757d;
-}
-
-.landing-cv {
-  text-align: left;
-  margin-top: 1rem;
-}
-
-.landing-cv a {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border: 1px solid #007bff;
-  border-radius: 2rem;
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.2s, color 0.2s;
-}
-
-.landing-cv a:hover {
-  background-color: #007bff;
-  color: #fff;
 }
 
 #attribution {
