@@ -19,6 +19,14 @@ main .row.p-4 > div.mt-4 {
   margin-top: 0.25rem;
 }
 
+main .row.p-4 p.text-muted {
+  margin-bottom: 0;
+}
+
+main .row.p-4 #container.my-2 {
+  margin-bottom: 0 !important;
+}
+
 #attribution {
   position: static !important;
   writing-mode: horizontal-tb !important;
